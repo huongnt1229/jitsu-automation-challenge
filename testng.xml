@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="My Framework Suite">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="isIncognito" value="true"/>
+
+    <test name="OpenWeatherMap Tests">
+        <parameter name="openWeatherMapUrl" value="https://openweathermap.org/"/>
+        <classes>
+            <class name="my.tests.WeatherMapTests"/>
+        </classes>
+    </test>
+    <test name="GitHub API Tests">
+        <classes>
+            <class name="my.tests.GitHubAPITests"/>
+        </classes>
+    </test>
+</suite>

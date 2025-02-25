@@ -34,26 +34,4 @@ public class GitHubAPITests {
         System.out.println("Repository with most watchers: " + mostWatchedRepo.getString("name") +
                 " (Watchers: " + mostWatchedRepo.getInt("watchers_count") + ")");
     }
-
-    /*private int getTotalOpenIssues(JSONArray repos) {
-        int totalIssues = 0;
-        for (int i = 0; i < repos.length(); i++) {
-            totalIssues += repos.getJSONObject(i).getInt("open_issues_count");
-        }
-        return totalIssues;
-    }
-
-    private List<JSONObject> sortRepositoriesByUpdatedAt(JSONArray repos) {
-        return repos.toList().stream()
-                .map(obj -> new JSONObject((java.util.Map<?, ?>) obj))
-                .sorted(Comparator.comparing(repo -> repo.getString("updated_at"), Comparator.reverseOrder()))
-                .collect(Collectors.toList());
-    }
-
-    private JSONObject getMostWatchedRepository(JSONArray repos) {
-        return repos.toList().stream()
-                .map(obj -> new JSONObject((java.util.Map<?, ?>) obj))
-                .max(Comparator.comparing(repo -> repo.getInt("watchers_count")))
-                .orElseThrow(() -> new RuntimeException("No repositories found"));
-    }*/
 }
